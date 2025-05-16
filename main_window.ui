@@ -1,0 +1,1149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>999</width>
+    <height>922</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">/* Estilos generales */
+QWidget {
+    background-color: #F8F9FA; /* Gris claro */
+}
+
+* {
+    font-family: 'Verdana', sans-serif;
+}
+
+/* Estilos para QLabel */
+QLabel {
+    color: #333333; /* Gris oscuro */
+}
+
+/* Estilos para QPushButton */
+QPushButton {
+    background-color: #007BFF; /* Azul */
+    color: #FFFFFF;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #007BFF;
+    border-radius: 15px; /* Esto hará que los botones sean redondos */
+    padding: 5px;
+    min-width: 80px;
+    max-width: 150px;
+    min-height: 25px;
+    max-height: 40px;
+}
+
+/* Cuando el mouse está sobre el botón */
+QPushButton:hover {
+    background-color: #0056b3; /* Azul oscuro */
+    border-color: #0056b3;
+}
+
+/* Estilos para QLineEdit */
+QLineEdit {
+    background-color: #FFFFFF;
+    color: #333333;
+    border: 1px solid #CCCCCC;
+}
+
+/* Estilos para QPlainTextEdit */
+QPlainTextEdit {
+    background-color: #FFFFFF;
+    color: #333333;
+    border: 1px solid #CCCCCC;
+}
+
+/* Estilos para QTableWidget */
+QTableWidget {
+    background-color: #FFFFFF;
+    color: #333333;
+    gridline-color: #CCCCCC;
+}
+
+QHeaderView::section {
+    background-color: #E9ECEF; /* Gris claro */
+    color: #333333;
+    padding: 5px;
+    border: 1px solid #CCCCCC;
+}
+
+QTableWidget::item:selected {
+    background-color: #007BFF; /* Azul */
+    color: #FFFFFF;
+}
+
+/* Estilos para errores o alertas */
+QMessageBox {
+    background-color: #DC3545; /* Rojo */
+    color: #FFFFFF;
+}
+
+/* Estilos para QGroupBox */
+QGroupBox {
+    background-color: #E9ECEF; /* Gris claro */
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+QGroupBox::title {
+    color: #333333; /* Gris oscuro */
+    subcontrol-origin: margin;
+    subcontrol-position: top center;
+    padding: 0 3px;
+}
+</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QFrame" name="frame_principal">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout" stretch="1,11">
+       <item>
+        <widget class="QFrame" name="frame_superior">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_7">
+          <item>
+           <widget class="QLabel" name="label_53">
+            <property name="font">
+             <font>
+              <family>Verdana</family>
+              <pointsize>24</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Servicio Canela</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_inicio">
+            <property name="maximumSize">
+             <size>
+              <width>160</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton {
+    background-color: transparent;
+    border: none;
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset>
+              <normaloff>iconos/1200px-Motorkontrollleuchte.svg.png</normaloff>iconos/1200px-Motorkontrollleuchte.svg.png</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>70</width>
+              <height>70</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_inferior">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,8">
+          <item>
+           <widget class="QFrame" name="frame_botones">
+            <property name="styleSheet">
+             <string notr="true">QFrame {
+    /*background-color: black;*/
+    color: white; /* Cambia el color del texto si es necesario */
+    border-radius: 10px; /* Ajusta el valor para redondear más o menos las esquinas */
+}
+</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_6">
+             <item>
+              <widget class="QPushButton" name="pushButton_clientes">
+               <property name="minimumSize">
+                <size>
+                 <width>94</width>
+                 <height>39</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>164</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Verdana</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Clientes</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>iconos/persona.png</normaloff>iconos/persona.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_autos">
+               <property name="minimumSize">
+                <size>
+                 <width>94</width>
+                 <height>39</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>164</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Verdana</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Autos</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>iconos/auto.png</normaloff>iconos/auto.png</iconset>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_servicios">
+               <property name="minimumSize">
+                <size>
+                 <width>94</width>
+                 <height>39</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>164</width>
+                 <height>54</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Verdana</family>
+                 <pointsize>14</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Servicios</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>iconos/llave.png</normaloff>iconos/llave.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_paginas">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QStackedWidget" name="stackedWidget">
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="page_inicio">
+                <widget class="QLabel" name="label_37">
+                 <property name="geometry">
+                  <rect>
+                   <x>310</x>
+                   <y>200</y>
+                   <width>211</width>
+                   <height>71</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Verdana</family>
+                   <pointsize>20</pointsize>
+                   <weight>75</weight>
+                   <italic>true</italic>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Bienvenido !</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_clientes">
+                <layout class="QGridLayout" name="gridLayout_6">
+                 <item row="0" column="0">
+                  <widget class="QFrame" name="frame_c">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_3" stretch="1,11">
+                    <item>
+                     <widget class="QFrame" name="frame">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_5">
+                       <item>
+                        <widget class="QLabel" name="label_51">
+                         <property name="font">
+                          <font>
+                           <family>Verdana</family>
+                           <pointsize>16</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>Clientes</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_2">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_5">
+                       <item row="0" column="0">
+                        <widget class="QGroupBox" name="groupBox">
+                         <property name="title">
+                          <string>CREAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_2">
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label">
+                            <property name="text">
+                             <string>Nombre</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QLineEdit" name="nombre_cliente_crear_cliente_lineEdit"/>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_2">
+                            <property name="text">
+                             <string>Telefono</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QLineEdit" name="telefono_cliente_crear_cliente_lineEdit"/>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_3">
+                            <property name="text">
+                             <string>Descripción</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QPlainTextEdit" name="descripcion_cliente_crear_cliente_plainText"/>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QPushButton" name="guardar_crear_cliente_button">
+                            <property name="text">
+                             <string>GUARDAR</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QGroupBox" name="groupBox_3">
+                         <property name="title">
+                          <string>MOSTRAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_7">
+                          <item row="0" column="0">
+                           <widget class="QTableWidget" name="mostrar_clientes_clientes_tableWidget"/>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QPushButton" name="mostrar_mostrar_clientes_button">
+                            <property name="text">
+                             <string>MOSTRAR</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QGroupBox" name="groupBox_2">
+                         <property name="title">
+                          <string>ACTUALIZAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_9">
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_4">
+                            <property name="text">
+                             <string>Nombre</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QLineEdit" name="nombre_cliente_actualizar_cliente_lineEdit"/>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_6">
+                            <property name="text">
+                             <string>Telefono</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QLineEdit" name="telefono_cliente_actualizar_cliente_lineEdit"/>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_5">
+                            <property name="text">
+                             <string>Descripción</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QPlainTextEdit" name="descripcion_cliente_actualizar_cliente_plainText"/>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QPushButton" name="actualizar_actualizar_cliente_button">
+                            <property name="text">
+                             <string>ACTUALIZAR</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QGroupBox" name="groupBox_4">
+                         <property name="title">
+                          <string>ELIMINAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_8">
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_7">
+                            <property name="text">
+                             <string>Nombre</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QLineEdit" name="nombre_cliente_eliminar_cliente_lineEdit"/>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_9">
+                            <property name="text">
+                             <string>Telefono</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QLineEdit" name="telefono_cliente_eliminar_cliente_lineEdit"/>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_8">
+                            <property name="text">
+                             <string>Descripción</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QPlainTextEdit" name="descripcion_cliente_eliminar_cliente_plainText"/>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QPushButton" name="eliminar_eliminar_cliente_button">
+                            <property name="text">
+                             <string>ELIMINAR</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="page_autos">
+                <layout class="QGridLayout" name="gridLayout">
+                 <item row="0" column="0">
+                  <widget class="QFrame" name="frame_a">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_4" stretch="1,11">
+                    <item>
+                     <widget class="QFrame" name="frame_3">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_4">
+                       <item>
+                        <widget class="QLabel" name="label_52">
+                         <property name="font">
+                          <font>
+                           <family>Verdana</family>
+                           <pointsize>16</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>Autos</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_4">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_3">
+                       <item row="2" column="0">
+                        <widget class="QGroupBox" name="groupBox_7">
+                         <property name="title">
+                          <string>ACTUALIZAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_11">
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_43">
+                            <property name="text">
+                             <string>Modelo</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QLineEdit" name="modelo_actualizar_auto_lineEdit"/>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_42">
+                            <property name="text">
+                             <string>Marca</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QLineEdit" name="marca_actualizar_auto_lineEdit"/>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_45">
+                            <property name="text">
+                             <string>Año</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QLineEdit" name="anio_actualizar_auto_lineEdit"/>
+                          </item>
+                          <item row="3" column="0">
+                           <widget class="QLabel" name="label_44">
+                            <property name="text">
+                             <string>Descripción</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QPlainTextEdit" name="descripcion_actualizar_auto_plainTextEdit"/>
+                          </item>
+                          <item row="4" column="1">
+                           <widget class="QPushButton" name="actualizar_auto_pushButton">
+                            <property name="text">
+                             <string>ACTUALIZAR</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QGroupBox" name="groupBox_6">
+                         <property name="title">
+                          <string>CREAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_10">
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_46">
+                            <property name="text">
+                             <string>Modelo</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QLineEdit" name="modelo_crear_auto_lineEdit"/>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_47">
+                            <property name="text">
+                             <string>Marca</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QLineEdit" name="marca_crear_auto_lineEdit"/>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_48">
+                            <property name="text">
+                             <string>Año</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QLineEdit" name="anio_crear_auto_lineEdit"/>
+                          </item>
+                          <item row="3" column="0">
+                           <widget class="QLabel" name="label_49">
+                            <property name="text">
+                             <string>Descripción</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QPlainTextEdit" name="descripcion_crear_auto_plainTextEdit"/>
+                          </item>
+                          <item row="4" column="1">
+                           <widget class="QPushButton" name="crear_auto_pushButton">
+                            <property name="text">
+                             <string>CREAR</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QGroupBox" name="groupBox_8">
+                         <property name="title">
+                          <string>MOSTRAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_12">
+                          <item row="0" column="0">
+                           <widget class="QTableWidget" name="mostrar_auto_tableWidget"/>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QGroupBox" name="groupBox_9">
+                         <property name="title">
+                          <string>ELIMINAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_13">
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_39">
+                            <property name="text">
+                             <string>Modelo</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QLineEdit" name="modelo_eliminar_auto_lineEdit"/>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_38">
+                            <property name="text">
+                             <string>Marca</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QLineEdit" name="marca_eliminar_auto_lineEdit"/>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_41">
+                            <property name="text">
+                             <string>Año</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QLineEdit" name="anio_eliminar_auto_lineEdit"/>
+                          </item>
+                          <item row="3" column="0">
+                           <widget class="QLabel" name="label_40">
+                            <property name="text">
+                             <string>Descripción</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QPlainTextEdit" name="descripcion_eliminar_auto_plainTextEdit"/>
+                          </item>
+                          <item row="4" column="1">
+                           <widget class="QPushButton" name="eliminar_auto_pushButton">
+                            <property name="text">
+                             <string>ELIMINAR</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_10">
+                         <property name="text">
+                          <string>Cliente:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QLabel" name="cliente_autosTab_label">
+                         <property name="text">
+                          <string>(Nombre del cliente)</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="page_servicios">
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <item>
+                  <widget class="QFrame" name="frame_s">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QVBoxLayout" name="verticalLayout_5" stretch="1,11">
+                    <item>
+                     <widget class="QFrame" name="frame_5">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_6">
+                       <item>
+                        <widget class="QLabel" name="label_50">
+                         <property name="font">
+                          <font>
+                           <family>Verdana</family>
+                           <pointsize>16</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="text">
+                          <string>Servicios</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_6">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QGridLayout" name="gridLayout_4">
+                       <item row="2" column="0">
+                        <widget class="QGroupBox" name="groupBox_11">
+                         <property name="title">
+                          <string>ACTUALIZAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_16">
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_28">
+                            <property name="text">
+                             <string>Fecha</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QDateEdit" name="fecha_actualizar_servicio_dateEdit">
+                            <property name="dateTime">
+                             <datetime>
+                              <hour>0</hour>
+                              <minute>0</minute>
+                              <second>0</second>
+                              <year>2024</year>
+                              <month>1</month>
+                              <day>1</day>
+                             </datetime>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_30">
+                            <property name="text">
+                             <string>Precio</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QDoubleSpinBox" name="precio_actualizar_servicio_doubleSpinBox">
+                            <property name="maximum">
+                             <double>100000.000000000000000</double>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_27">
+                            <property name="text">
+                             <string>Inversión</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QDoubleSpinBox" name="inversion_actualizar_servicio_doubleSpinBox">
+                            <property name="maximum">
+                             <double>100000.000000000000000</double>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="0">
+                           <widget class="QLabel" name="label_29">
+                            <property name="text">
+                             <string>Kilometraje</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QLineEdit" name="kilometraje_actualizar_servicio_lineEdit"/>
+                          </item>
+                          <item row="4" column="0">
+                           <widget class="QLabel" name="label_31">
+                            <property name="text">
+                             <string>Resumen</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="4" column="1">
+                           <widget class="QPlainTextEdit" name="resumen_actualizar_servicio_plainTextEdit"/>
+                          </item>
+                          <item row="5" column="1">
+                           <widget class="QPushButton" name="actualizar_servicio_pushButton">
+                            <property name="text">
+                             <string>ACTUALIZAR</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QGroupBox" name="groupBox_10">
+                         <property name="title">
+                          <string>MOSTRAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_15">
+                          <item row="0" column="0">
+                           <widget class="QTableWidget" name="mostrar_servicio_tableWidget"/>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QGroupBox" name="groupBox_12">
+                         <property name="title">
+                          <string>ELIMINAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_17">
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_33">
+                            <property name="text">
+                             <string>Fecha</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QDateEdit" name="fecha_eliminar_servicio_dateEdit">
+                            <property name="dateTime">
+                             <datetime>
+                              <hour>0</hour>
+                              <minute>0</minute>
+                              <second>0</second>
+                              <year>2024</year>
+                              <month>1</month>
+                              <day>1</day>
+                             </datetime>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_35">
+                            <property name="text">
+                             <string>Precio</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QDoubleSpinBox" name="precio_eliminar_servicio_doubleSpinBox">
+                            <property name="maximum">
+                             <double>100000.000000000000000</double>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_32">
+                            <property name="text">
+                             <string>Inversión</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QDoubleSpinBox" name="inversion_eliminar_servicio_doubleSpinBox">
+                            <property name="maximum">
+                             <double>100000.000000000000000</double>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="0">
+                           <widget class="QLabel" name="label_34">
+                            <property name="text">
+                             <string>Kilometraje</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QLineEdit" name="kilometraje_eliminar_servicio_lineEdit"/>
+                          </item>
+                          <item row="4" column="0">
+                           <widget class="QLabel" name="label_36">
+                            <property name="text">
+                             <string>Resumen</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="4" column="1">
+                           <widget class="QPlainTextEdit" name="resumen_eliminar_servicio_plainTextEdit"/>
+                          </item>
+                          <item row="5" column="1">
+                           <widget class="QPushButton" name="eliminar_servicio_pushButton">
+                            <property name="text">
+                             <string>ELIMINAR</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QGroupBox" name="groupBox_5">
+                         <property name="title">
+                          <string>CREAR</string>
+                         </property>
+                         <layout class="QGridLayout" name="gridLayout_14">
+                          <item row="0" column="0">
+                           <widget class="QLabel" name="label_22">
+                            <property name="text">
+                             <string>Fecha</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="0" column="1">
+                           <widget class="QDateEdit" name="fecha_crear_servicio_dateEdit">
+                            <property name="dateTime">
+                             <datetime>
+                              <hour>0</hour>
+                              <minute>0</minute>
+                              <second>0</second>
+                              <year>2024</year>
+                              <month>1</month>
+                              <day>1</day>
+                             </datetime>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="0">
+                           <widget class="QLabel" name="label_23">
+                            <property name="text">
+                             <string>Precio</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="1" column="1">
+                           <widget class="QDoubleSpinBox" name="precio_crear_servicio_doubleSpinBox">
+                            <property name="maximum">
+                             <double>100000.000000000000000</double>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="0">
+                           <widget class="QLabel" name="label_24">
+                            <property name="text">
+                             <string>Inversión</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="2" column="1">
+                           <widget class="QDoubleSpinBox" name="inversion_crear_servicio_doubleSpinBox">
+                            <property name="maximum">
+                             <double>100000.000000000000000</double>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="0">
+                           <widget class="QLabel" name="label_25">
+                            <property name="text">
+                             <string>Kilometraje</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="3" column="1">
+                           <widget class="QLineEdit" name="kilometraje_crear_servicio_lineEdit"/>
+                          </item>
+                          <item row="4" column="0">
+                           <widget class="QLabel" name="label_26">
+                            <property name="text">
+                             <string>Resumen</string>
+                            </property>
+                           </widget>
+                          </item>
+                          <item row="4" column="1">
+                           <widget class="QPlainTextEdit" name="resumen_crear_servicio_plainTextEdit"/>
+                          </item>
+                          <item row="5" column="1">
+                           <widget class="QPushButton" name="crear_servicio_pushButton">
+                            <property name="text">
+                             <string>CREAR</string>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
+                        </widget>
+                       </item>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="label_11">
+                         <property name="text">
+                          <string>Automovil:</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QLabel" name="automovil_serviciosTab_label">
+                         <property name="text">
+                          <string>(Nombre del automovil)</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
