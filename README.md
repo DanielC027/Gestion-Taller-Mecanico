@@ -1,23 +1,27 @@
-# Akinator de Los Simpsons con Redes Neuronales Artificiales (Brain.js + React + Firebase)
-Proyecto escolar para evaluación de conocimiento sobre Redes Neuronales Arificiales.
-
-Implementación de Red Neuronal Artificial para la predicción de personajes de Los Simpsons.
+#  Sistema de gestion de clientes para Taller Mecanico (PySide2)
+Proyecto escolar de la materia Ingenieria de Software.
 
 ## DESCRIPCIÓN
-Se usó React con Vite y Tailwind para la creación del frontend de este proyecto, implementando también la librería Brain.js,
-la cual se uso para encontrar el personaje tomando en cuenta las respuestas del usuario al formulario proporcionado y entrenando
-con patrones establecidos tomados de una base de datos en Firebase, obteniendo así predicciones de los personajes pensados.
+Se creo una interfaz grafica con python para poder manipular la informacion de clientes de un taller mecanico
+el cual solo almacena datos de clientes, sus automoviles y los servicios de cada uno,
+la base de datos y el backend en php fueron montados en un servidor de 000webhost.
 
 ## Imagenes del proyecto
 
-### Interfaz
-![EjemploApp](EjemploApp.jpeg)
+### Iniciar sesion
+![EjemploApp](login_1.png)
 
-### 1
-![Ejemplo](image_1.jpeg)
+### Registrarse
+![EjemploApp](login_2.png)
 
-### 2
-![Ejemplo](image_2.jpeg)
+### Bienvenida
+![Ejemplo](Bienvenida.png)
 
-### 3
-![Ejemplo](image_3.jpeg)
+### Clientes
+![Ejemplo](Clientes.png)
+
+### Automoviles
+![Ejemplo](Autos.png)
+
+### Servicios
+![Ejemplo](Servicios.png)
